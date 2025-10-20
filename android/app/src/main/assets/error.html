@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #D3D3D3;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            max-width: 80%;
+            margin: auto;
+            box-sizing: border-box;
+            opacity: 0;
+            animation: fadeIn 0.7s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            if (window.Android && Android.exitApp) {
+                Android.exitApp();
+            } else {
+                window.location.reload();
+            }
+        }, 2000);
+    </script>
+</head>
+<body>
+
+<p>Maaf, terjadi galat. Aplikasi akan dimuat ulang, tunggu sebentar..</p>
+</body>
+</html>
